@@ -27,7 +27,7 @@ func TestGetAvailableLoans(t *testing.T) {
 		{
 			name:     "Customer with income >= 5000",
 			customer: models.Customer{Income: 5000, Age: 40, Location: "SP"},
-			expected: []models.Loan{models.CONSIGMENT_LOAN},
+			expected: []models.Loan{models.CONSIGNMENT_LOAN},
 		},
 		{
 			name:     "Customer with income between 3000 and 5000, age >= 30, and location SP",

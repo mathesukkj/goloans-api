@@ -9,7 +9,7 @@ import (
 func NewRouter() *fiber.App {
 	app := fiber.New()
 
-	app.Post("/customer-loans", controllers.GetPossibleCustomerLoans)
+	app.Post("/customer-loans", controllers.CheckAvailableCustomerLoans)
 
 	return app
 }

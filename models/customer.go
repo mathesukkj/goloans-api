@@ -7,3 +7,8 @@ type Customer struct {
 	Income   int32  `json:"income"   validate:"required"`
 	Location string `json:"location" validate:"required"`
 }
+
+type CustomerLoansResponse struct {
+	Customer string `json:"customer"`
+	Loans    []Loan `json:"loans"`
+}

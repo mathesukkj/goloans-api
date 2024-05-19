@@ -17,7 +17,7 @@ func GetAvailableLoans(customer *models.Customer) []models.Loan {
 	}
 
 	if customer.Income >= 5000 {
-		loans = append(loans, models.CONSIGMENT_LOAN)
+		loans = append(loans, models.CONSIGNMENT_LOAN)
 	}
 
 	return loans

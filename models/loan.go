@@ -15,7 +15,7 @@ var GUARANTEED_LOAN = Loan{
 	InterestRate: 3,
 }
 
-var CONSIGMENT_LOAN = Loan{
+var CONSIGNMENT_LOAN = Loan{
 	Type:         "CONSIGNMENT",
 	InterestRate: 2,
 }
