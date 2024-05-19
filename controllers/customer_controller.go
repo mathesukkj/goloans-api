@@ -5,6 +5,7 @@ import (
 	"github.com/gofiber/fiber/v3"
 
 	"github.com/mathesukkj/goloans-api/models"
+	"github.com/mathesukkj/goloans-api/services"
 )
 
 func GetPossibleCustomerLoans(c fiber.Ctx) error {
@@ -27,5 +28,6 @@ func GetPossibleCustomerLoans(c fiber.Ctx) error {
 
 	return c.Status(fiber.StatusOK).JSON(fiber.Map{
 		"customer": customer.Name,
+		"loans":    services.GetAvailableLoans(customer),
 	})
 }
