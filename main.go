@@ -3,15 +3,11 @@ package main
 import (
 	"log"
 
-	"github.com/gofiber/fiber/v3"
+	"github.com/mathesukkj/goloans-api/routes"
 )
 
 func main() {
-	app := fiber.New()
-
-	app.Get("/", func(c fiber.Ctx) error {
-		return c.SendString("hello world!")
-	})
+	app := routes.NewRouter()
 
 	log.Fatal(app.Listen(":8080"))
 }
